@@ -1,0 +1,335 @@
+@charset "UTF-8";
+#menu-link {
+  width: 70px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  background-color: #293949;
+  border-radius: 5px;
+  color: #fff;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: none;
+  z-index: 9996;
+}
+#menu-link:hover {
+  color: #eee;
+  text-decoration: none;
+}
+
+nav ul li {
+  width: 25%;
+  height: 160px;
+  float: left;
+  position: relative;
+}
+nav ul li:before {
+  content: "";
+  width: 2px;
+  height: 20%;
+  position: absolute;
+  top: 40%;
+  right: -2px;
+  background-color: #7e7e7e;
+}
+
+nav ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #7e7e7e;
+  text-transform: uppercase;
+  overflow: hidden;
+  position: relative;
+}
+nav ul li a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.active-state {
+  line-height: 165px;
+}
+
+.hover-img {
+  width: 100%;
+  height: 83px;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  transition: top 0.15s ease-in-out;
+}
+
+.hover-txt {
+  width: 100%;
+  position: absolute;
+  bottom: -100%;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: 'Roboto Slab', serif;
+  color: white;
+  transition: bottom 0.15s ease-in-out;
+}
+.hover-txt:after {
+  content: " ";
+  display: block;
+  line-height: 0;
+  margin: 5px 0 15px 0;
+}
+
+.about .hover-img {
+  background: url("../assets/about-hover.png") no-repeat center center;
+}
+
+.about:hover {
+  background-color: #b31e51;
+}
+
+.services .hover-img {
+  background: url("../assets/service-hover.png") no-repeat center center;
+}
+
+.services .hover-txt:after {
+  content: "";
+  display: block;
+}
+.services:hover {
+  background-color: #cd9e31;
+}
+
+.careers .hover-img {
+  background: url("../assets/career-hover.png") no-repeat center center;
+}
+.careers:hover {
+  background-color: #3f9671;
+}
+
+.careers .hover-txt:after {
+  content: "";
+  display: block;
+}
+
+.contact .hover-img {
+  background: url("../assets/contact-hover.png") no-repeat center center;
+}
+.contact:hover {
+  background-color: #427c9d;
+}
+.contact .hover-txt:after {
+  content: "";
+  display: block;
+}
+
+nav li:hover .active-state {
+  display: none;
+}
+nav li:hover .hover-img {
+  top: 40px;
+}
+nav li:hover .hover-txt {
+  bottom: 30%;
+}
+nav li:hover:before {
+  display: none;
+}
+
+.current-link a {
+  color: #fff;
+}
+.current-link a:hover {
+  cursor: default;
+}
+.current-link:before {
+  display: none;
+}
+.current-link:hover {
+  padding-bottom: 0;
+}
+.current-link:hover .active-state {
+  display: block;
+}
+.current-link .hover-img,
+.current-link .hover-txt {
+  display: none;
+}
+
+.current-link.about {
+  background: url("../assets/nav-about.png") no-repeat center center #b31e51;
+}
+
+.current-link.services {
+  background: url("../assets/nav-services.png") no-repeat center center #cd9e31;
+}
+
+.current-link.careers {
+  background: url("../assets/nav-careers.png") no-repeat center center #3f9671;
+}
+
+.current-link.contact {
+  background: url("../assets/contact-icon-nav.png") no-repeat center center #427c9d;
+}
+
+#home .current-link a {
+  color: #7e7e7e;
+}
+
+#home-link {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 95px;
+  height: 95px;
+  line-height: 100px;
+  border-radius: 50%;
+  background: url("../assets/home-link.png") no-repeat center center #63a1a5;
+  padding: 0;
+  z-index: 9998;
+  border: none;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.5);
+  transition: top 0.15s ease-in-out;
+}
+#home-link:hover {
+  top: 20px;
+}
+
+#home #home-link {
+  display: none;
+}
+
+#about #home-link {
+  background-color: #b31e51;
+}
+
+#services #home-link {
+  background-color: #cd9e31;
+}
+
+#careers #home-link {
+  background-color: #3f9671;
+}
+
+#contact #home-link {
+  background-color: #427c9d;
+}
+
+.link-top {
+  margin-bottom: 20px;
+  margin-top: 50px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+}
+.link-top a {
+  color: #63a1a5;
+  font-weight: 700;
+}
+.link-top a:hover {
+  text-decoration: none;
+  color: #63a1a5;
+}
+.link-top a:hover img {
+  margin: 0 0;
+}
+.link-top img {
+  display: inline;
+  vertical-align: middle;
+  margin: 0 10px;
+  transition: margin 0.25s ease-in-out;
+}
+.link-top span {
+  vertical-align: middle;
+  word-spacing: 7px;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    position: fixed;
+    left: -200px;
+    top: 0;
+    width: 200px;
+    bottom: 0;
+    height: 100%;
+    background-color: #293949;
+    z-index: 10000;
+    overflow: scroll;
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    -webkit-transition: 0.15s ease;
+    -moz-transition: 0.15s ease;
+    -o-transition: 0.15s ease;
+    transition: 0.15s ease;
+  }
+
+  nav.activate {
+    -webkit-transform: translate(200px, 0px);
+    -moz-transform: translate(200px, 0px);
+    -o-transform: translate(200px, 0px);
+    -ms-transform: translate(200px, 0px);
+    transform: translate(200px, 0px);
+  }
+
+  #home nav {
+    border-top: 10px solid #18a0a1;
+  }
+  #home nav ul {
+    padding-top: 0;
+  }
+
+  #about nav {
+    border-top: 10px solid #b31e51;
+  }
+
+  #services nav {
+    border-top: 10px solid #cd9e31;
+  }
+
+  #careers nav {
+    border-top: 10px solid #3f9671;
+  }
+
+  #contact nav {
+    border-top: 10px solid #427c9d;
+  }
+
+  nav ul {
+    padding-top: 187px;
+  }
+
+  nav ul li {
+    width: 100%;
+    float: none;
+  }
+  nav ul li a {
+    color: #fff;
+  }
+  nav ul li:before {
+    display: none;
+  }
+
+  .hover-txt {
+    font-size: 12px;
+  }
+
+  #home .current-link a {
+    color: #fff;
+    border-right: none;
+  }
+
+  #home-link {
+    position: absolute;
+    right: 50px;
+    top: 46px;
+  }
+
+  #menu-link {
+    display: block;
+  }
+}
